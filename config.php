@@ -3,7 +3,7 @@
 return [
     'db' => [
         'host' => 'localhost',
-        'dbname' => 'world',
+        'dbname' => 'world2',
         'username' => 'root',
         'password' => 'root',
         'charset' => 'utf8', // utf8mb4

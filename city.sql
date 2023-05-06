@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Май 04 2023 г., 17:21
+-- Время создания: Май 06 2023 г., 10:33
 -- Версия сервера: 10.1.44-MariaDB
 -- Версия PHP: 8.0.1
 
@@ -18,10 +18,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `world`
+-- База данных: `world2`
 --
-CREATE DATABASE IF NOT EXISTS `world` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `world`;
 
 -- --------------------------------------------------------
 
@@ -30,11 +28,11 @@ USE `world`;
 --
 
 CREATE TABLE IF NOT EXISTS `city` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` char(35) NOT NULL DEFAULT '',
-  `population` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=4081 DEFAULT CHARSET=utf8mb4;
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `population` int(10) UNSIGNED NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4080 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `city`

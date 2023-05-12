@@ -6,6 +6,26 @@
     <title>PHP CRUD with AJAX, MySQL and Bootstrap</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <style>
+        #loader {
+            background: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            position: absolute;
+            top: 150px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            display: none;
+        }
+
+        #loader img {
+            width: 100px;
+        }
+        #clear-search {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
@@ -18,9 +38,24 @@
 
     <div class="row">
         <div class="col-12">
-            <button class="btn btn-primary rounded-0 btn-add" data-bs-toggle="modal" data-bs-target="#addCity">Add
-                city
-            </button>
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn btn-primary rounded-0 btn-add" data-bs-toggle="modal" data-bs-target="#addCity">Add
+                        city
+                    </button>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group mb-3">
+                        <input type="text" id="search" class="form-control" placeholder="Search...">
+                        <span class="input-group-text" id="clear-search">&times;</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="loader">
+            <img src="assets/ripple.svg" alt="">
         </div>
 
         <div class="table-responsive my-3">
@@ -96,6 +131,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="assets/mark.min.js"></script>
 <script src="assets/main.js"></script>
 </body>
 </html>
